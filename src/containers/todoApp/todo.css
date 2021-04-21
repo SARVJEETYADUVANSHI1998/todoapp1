@@ -1,0 +1,51 @@
+.todolist{
+    background-color: chocolate;
+
+}
+
+.t1{
+    background-color: hotpink;
+    margin: 0rem;
+
+}
+
+.t1 .delete-btn{
+    background-color: royalblue;
+    border-radius: 5px;
+    border: 2px solid greenyellow;
+    padding:2px 4px 2px 2px;
+    margin: 2em;
+    font-family: verdana;
+    text-align: right;
+
+}
+.t2{
+    color: seagreen;
+    font-family: verdana;
+    text-align: justify;
+    padding-left: 80px;
+}
+
+#s{
+    text-decoration: blueviolet;
+    padding-left: 100px;
+    font-size: 30px;
+
+}
+
+.t1 .edit-btn{
+    color: blue;
+    border-radius: 5px;
+    border: 2px solid red;
+    text-align:end;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+    
+}
+
+#todo {
+    border: 2px solid  ghostwhite;
+    color: hotpink;
+    font-weight: bold;
+
+}
