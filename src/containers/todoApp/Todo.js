@@ -2,42 +2,44 @@ import React, { useState } from 'react'
 import './todo.css'
 
 export default (props)=>{
-    const [first, setFrist]=useState('');
+    const [first, setFirst]=useState('');
     const [second,setSecond]=useState([]);
     // const [edit, setEdite]=useState(true);
 
     const submitbutton = () =>{
         console.log('submit');
-        
+        //  console.log(editbutton);
         const arr = [first,...second,];
         setSecond(arr);
         console.log(arr);
+        
         
     //     const ar = second;
     //     ar.push(first); 
     //     setSecond(ar); 
       }
      const x = (a)=>{
-         setFrist(a);
+         setFirst(a);
      }
 
      const editbutton=()=>{
-        console.log('first');
-            //   setSecond([]);
-              setFrist('');
-            //   setEdite(true);
-          
-
+        console.log(first);
+              const y =[];
+              setFirst(y);
+            //  console.log(y);
+               setSecond(y);
      }
 
      const deletebutton=()=>{
-        console.log([second]);
-        // setFrist('');
-        setSecond([]);
-       
+        console.log(second);
         
+       const ar =[];
+       setSecond(ar);
+       setFirst(ar);
+    //    console.log(ar);
      }
-    
+
+        
 
    return (
         <div className="todolist">
@@ -48,16 +50,16 @@ export default (props)=>{
          <input type="text" value={first} onChange={(el)=>{x(el.target.value)}}  id="todo" placeholder=" enter the number"/>
          <br/>
          <button onClick={submitbutton}    className="btn">submit</button>
-         <br/>
+         
          
          {/* <p>{first}</p> */}
          {
              second.map((item,index)=>{
                  return<div className="t1">
-                     <button onClick={()=>{deletebutton(item.first,item.second)}} text={item} onSelect={deletebutton}  className="delete-btn" > delete </button>
-                     <p>{item}</p>
-                     <br/>
-                     <button onClick={()=>{editbutton(item.first,item.second)}}  key={index}  text={item} className="edit-btn">edit function</button>
+                     <button onClick={()=>{deletebutton()}}  className="delete-btn" > delete </button>
+                     
+                     
+                     <button onClick={()=>{editbutton()}}  className="edit-btn">Edit</button>
                      <p>{item}</p>
                      
                 </div>
